@@ -1,0 +1,10 @@
+li a {
+    color: green;
+}
+body {
+    background: white url("images/dragon.jpg") no-repeat right bottom;
+}
+
+p{
+    color: white
+}

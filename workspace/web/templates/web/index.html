@@ -1,0 +1,13 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'web/style.css' %}" />
+
+{% if latest_option_list %}
+    <ul>
+    {% for option in latest_option_list %}
+        <li><a href="/web/{{ option.option_text }}/">{{ option.option_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No blogs are available.</p>
+{% endif %}

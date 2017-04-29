@@ -1,0 +1,11 @@
+{% load staticfiles %}
+<script src="{% static 'web/main.js' %}" type="text/javascript"></script>
+{% if blog_list %}
+    <ul>
+    {% for blog in blog_list %}
+        <li><a href="/web/View All Blogs/blog/{{ blog.id }}/" onmouseover="dateDisplay(this)" id="link">{{ blog.pub_date }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No blogs are available.</p>
+{% endif %}
